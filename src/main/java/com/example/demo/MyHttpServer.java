@@ -33,7 +33,7 @@ public class MyHttpServer {
         server.createContext("/enter", new EntryHandler(workers_data));
         server.createContext("/exit", new ExitHandler(workers_data));
         server.createContext("/info", new InfoHandler(workers_data));
-        server.createContext("/error", new ErrorHandler());
+        server.createContext("/", new ErrorHandler());
         server.setExecutor(null);
         server.start();
     }
