@@ -25,17 +25,17 @@ public class MyHttpServer {
 
     public static void main(String[] args) throws IOException {
 
-        int port = Integer.parseInt(System.getenv("PORT"));
-        //int port = 8080;
-        HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
-        All_workers workers_data = new All_workers();
-        System.out.println("Server started on port " + port);
-        server.createContext("/enter", new EntryHandler(workers_data));
-        server.createContext("/exit", new ExitHandler(workers_data));
-        server.createContext("/info", new InfoHandler(workers_data));
-        server.createContext("/error", new ErrorHandler());
-        server.setExecutor(null);
-        server.start();
+//        int port = Integer.parseInt(System.getenv("PORT"));
+//        //int port = 8080;
+//        HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
+//        All_workers workers_data = new All_workers();
+//        System.out.println("Server started on port " + port);
+//        server.createContext("/enter", new EntryHandler(workers_data));
+//        server.createContext("/exit", new ExitHandler(workers_data));
+//        server.createContext("/info", new InfoHandler(workers_data));
+//        server.createContext("/error", new ErrorHandler());
+//        server.setExecutor(null);
+//        server.start();
     }
 
     static class EntryHandler implements HttpHandler {
