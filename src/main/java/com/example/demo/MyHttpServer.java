@@ -25,8 +25,7 @@ public class MyHttpServer {
 
     public static void main(String[] args) throws IOException {
 
-        int port = process.env.PORT;
-        //int port = Integer.parseInt(System.getenv("PORT"));
+        int port = Integer.parseInt(System.getenv("PORT"));
         //int port = 8080;
         HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
         All_workers workers_data = new All_workers();
