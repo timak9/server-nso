@@ -1,1 +1,1 @@
-web: java -jar build/libs/*.jar $PORT
+web: java -jar build/libs/*.jar
